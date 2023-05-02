@@ -5,10 +5,11 @@
 </head>
 <body>
 
+
 <form method="post" action="login.jsp">
 
     <label for="user"></label>
-    <input id="user" placeholder="username..." type="email" required>
+    <input id="user" placeholder="username..." type="text" required>
     <label for="password"></label>
     <input id="password" placeholder="password..." type="password" required>
     <input type="submit" value="Login">
@@ -17,15 +18,17 @@
 
 <!-- checking to see if submitted is admin -->
 <%
-    String username = request.getParameter("username");
-    String password = request.getParameter("password");
+    if(request.getMethod().equals("post")) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 //    redirecting to profile.jsp
-    if(username != null && password != null && username.equals("admin") && password.equals("password")) {
-        response.sendRedirect("profile.jsp");
-    }
+        if (username != null && password != null && username.equals("admin") && password.equals("password")) {
+            response.sendRedirect("profile.jsp");
+        }
 //    redirecting back to log in.jsp
-    else {
-        response.sendRedirect("login.jsp");
+        else {
+            response.sendRedirect("login.jsp");
+        }
     }
 %>
 
