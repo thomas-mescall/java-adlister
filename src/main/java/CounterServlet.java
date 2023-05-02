@@ -17,12 +17,9 @@ import java.io.PrintWriter;
             PrintWriter out = response.getWriter();
             if (reset == null) {
                 count++;
-                //out.println("<html>" + count + "</html>");
             } else {
-                out.println("<html>" + "COUNT HAS BEEN RESET!!!" + "<html>");
+                out.println("<html>" + "COUNT HAS BEEN RESET!!!" + "</html>");
                 count = 0;
-//                out.println("<html>" + count + "<html>");
-                //reset = 0;
             }
             out.println("<html>" + count + "<html>");
         }
