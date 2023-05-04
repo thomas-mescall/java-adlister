@@ -10,11 +10,4 @@ public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        session.removeAttribute("user");
-        session.invalidate();
-
-        request.getRequestDispatcher("/logout.jsp");
-    }
 }
