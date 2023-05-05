@@ -12,6 +12,10 @@ public class ViewProfileServlet extends HttpServlet {
     HttpSession session;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+
+//        String username = (String)session.getAttribute("user");
+//        request.setAttribute("username", username);
+
         String logout = request.getParameter("logout");
         boolean exit = logout.equals("true");
         if(exit) {

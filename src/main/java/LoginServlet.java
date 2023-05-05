@@ -9,6 +9,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
 
+    //creating global session
     HttpSession session;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/login.jsp").forward(request, response);
@@ -28,6 +29,9 @@ public class LoginServlet extends HttpServlet {
 
         session = request.getSession();
         session.setAttribute("user", validAttempt);
+        session.setAttribute("username", username);
+
+
 
         if (((boolean) request.getSession().getAttribute("user"))) {
             response.sendRedirect("/profile");
