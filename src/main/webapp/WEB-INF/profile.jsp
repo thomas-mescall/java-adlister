@@ -12,9 +12,9 @@
         <h1>Viewing your profile.</h1>
     </div>
 
-<form action="profile.jsp" method="post">
+<form action="../logout.jsp" method="post">
 
-    <button type="submit">Logout</button>
+    <button type="submit" name="logout">Logout</button>
 
 </form>
 

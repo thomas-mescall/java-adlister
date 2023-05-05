@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-</head>
+
+    <title></title></head>
 <body>
 
+<form method="post" action="login.jsp">
+    <a href="https://youtu.be/dQw4w9WgXcQ">YOU ARE LOGGED OUT</a>
+</form>
 </body>
 </html>
