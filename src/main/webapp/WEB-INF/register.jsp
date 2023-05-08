@@ -11,6 +11,15 @@
     <title>Register</title>
 </head>
 <body>
+<form action="/register" method="post">
+    <label for="username">Enter Username</label>
+    <input id="username" name="username" type="text">
+    <label for="email">Enter Email</label>
+    <input id="email" name="email" type="email">
+    <label for="password">Enter Password</label>
+    <input id="password" name="password" type="password">
+    <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>

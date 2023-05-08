@@ -49,12 +49,12 @@ public class MySQLUsersDao implements Users{
             }
         }
 
-    public static void main(String[] args) {
-        Config config = new Config();
-        MySQLUsersDao mySQLUsersDao = new MySQLUsersDao(config);
-        User user = new User("test", "email", "password");
-        mySQLUsersDao.insert(user);
-    }
+//    public static void main(String[] args) {
+//        Config config = new Config();
+//        MySQLUsersDao mySQLUsersDao = new MySQLUsersDao(config);
+//        User user = new User("test", "email", "password");
+//        mySQLUsersDao.insert(user);
+//    }
     }
 
 
