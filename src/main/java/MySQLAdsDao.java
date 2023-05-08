@@ -3,15 +3,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class MySQLAdsDao implements Ads  {
 
     private Connection connection;
     public MySQLAdsDao(Config config) {
         try {
-               String url = config.getURL();
-               String username = config.getUsername();
-               String password = config.getPassword();
-                connection = DriverManager.getConnection(url, username, password);
+            String url = config.getURL();
+            String username = config.getUsername();
+            String password = config.getPassword();
+            connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -39,6 +40,12 @@ public class MySQLAdsDao implements Ads  {
 
     @Override
     public Long insert(Ad ad) {
+        try{
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate("INSERT INTO ads (title, description) VALUES('07 Tundra', '$20')");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return null;
     }
 }
